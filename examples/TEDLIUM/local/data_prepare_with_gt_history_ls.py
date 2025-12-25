@@ -1,0 +1,97 @@
+import json
+import os
+from collections import defaultdict
+import copy
+from whisper.normalizers import EnglishTextNormalizer, BasicTextNormalizer
+
+english_normalizer = EnglishTextNormalizer()
+
+source_files = [
+    "manifests/test_clean_20250818.json", 
+    "manifests/test_other_20250818.json",
+]
+
+context_lengths = [1, 2, 3, 4, 5]
+
+def get_output_path(input_path, n):
+    base, ext = os.path.splitext(input_path)
+    base = base.replace("_20250818", "")
+    return f"{base}_{n}_gt{ext}"
+
+def process_file_fixed_contexts(file_path):
+    if not os.path.exists(file_path):
+        print(f"Skipping: {file_path} (File not found)")
+        return
+
+    print(f"Reading source: {file_path} ...")
+    
+    raw_data = []
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            for line in f:
+                if line.strip():
+                    data = json.loads(line)
+                    data["text"] = english_normalizer(data["text"]).lower()
+                    raw_data.append(data)
+        with open(file_path, "w", encoding="utf-8") as f:
+            for data in raw_data:
+                f.write(json.dumps(data, ensure_ascii=False) + "\n")
+    except Exception as e:
+        print(f"Error reading {file_path}: {e}")
+        return
+
+    grouped_data = defaultdict(list)
+    for item in raw_data:
+        filename = os.path.basename(item['audio_path'])
+        name_no_ext = os.path.splitext(filename)[0]
+        
+        try:
+            talk_id, seg_index_str = name_no_ext.rsplit('-', 1)
+            item['_temp_sort_idx'] = int(seg_index_str)
+            grouped_data[talk_id].append(item)
+        except ValueError:
+            print(f"Warning: Skipping file with unexpected format: {filename}")
+            continue
+
+    for talk_id in grouped_data:
+        grouped_data[talk_id].sort(key=lambda x: x['_temp_sort_idx'])
+
+    for n in context_lengths:
+        output_data = []
+        
+        for talk_id, segments in grouped_data.items():
+            all_texts = [s['text'] for s in segments]
+            
+            for i, original_item in enumerate(segments):
+                item = copy.deepcopy(original_item)
+                
+                if '_temp_sort_idx' in item:
+                    del item['_temp_sort_idx']
+                
+                if i > 0:
+                    start_idx = max(0, i - n)
+                    context_sentences = all_texts[start_idx : i]
+                    
+                    if context_sentences:
+                        context_str = "\n".join(context_sentences)
+                        new_prompt = (
+                            f"<context_text>\n{context_str}\n</context_text>\n"
+                            f"Transcribe speech to text based on the context_text."
+                        )
+                        item['task_prompt'] = new_prompt
+                
+                output_data.append(item)
+        
+        output_path = get_output_path(file_path, n)
+        try:
+            with open(output_path, 'w', encoding='utf-8') as f_out:
+                for item in output_data:
+                    f_out.write(json.dumps(item, ensure_ascii=False) + '\n')
+            print(f"  -> Generated: {output_path} (Context={n})")
+        except Exception as e:
+            print(f"Error writing {output_path}: {e}")
+
+if __name__ == "__main__":
+    for f in source_files:
+        process_file_fixed_contexts(f)
+    print("\nAll tasks completed.")
