@@ -1,143 +1,100 @@
-<table>
-    <thead>
-        <tr>
-            <th>N_Whisper</th>
-            <th>Dropout</th>
-            <th>WER</th>
-            <th>Alpha</th>
-            <th>Ordinary</th>
-            <th>Attack</th>
-            <th>Diff</th>
-            <th>Clean</th>
-            <th>Other</th>
-            <th>Avg(C/O)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan="14" align="center" valign="middle">1</td>
-            <td align="center">0</td>
-            <td align="center">20</td>
-            <td align="center">2</td>
-            <td align="center">5.75</td>
-            <td align="center">6.01</td>
-            <td align="center">0.26</td>
-            <td align="center">4.67</td>
-            <td align="center">9.22</td>
-            <td align="center">6.945</td>
-        </tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">4</td><td align="center">5.22</td><td align="center">5.84</td><td align="center">0.62</td><td align="center">4.98</td><td align="center">9.23</td><td align="center">7.105</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">6</td><td align="center">5.45</td><td align="center">5.45</td><td align="center">0.00</td><td align="center">4.74</td><td align="center">9.35</td><td align="center">7.045</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">8</td><td align="center">5.69</td><td align="center">5.50</td><td align="center">-0.19</td><td align="center">4.71</td><td align="center">9.57</td><td align="center">7.140</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">12</td><td align="center">6.51</td><td align="center">6.31</td><td align="center">-0.20</td><td align="center">5.07</td><td align="center">10.28</td><td align="center">7.675</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">16</td><td align="center">11.09</td><td align="center">11.05</td><td align="center">-0.04</td><td align="center">6.77</td><td align="center">13.19</td><td align="center">9.980</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">20</td><td align="center">26.77</td><td align="center">27.52</td><td align="center">0.75</td><td align="center">19.27</td><td align="center">28.19</td><td align="center">23.730</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">2</td><td align="center">6.44</td><td align="center">6.15</td><td align="center">-0.29</td><td align="center">4.98</td><td align="center">9.64</td><td align="center">7.310</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">4</td><td align="center">6.45</td><td align="center">6.01</td><td align="center">-0.44</td><td align="center">4.45</td><td align="center">9.28</td><td align="center">6.865</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">6</td><td align="center">4.98</td><td align="center">5.14</td><td align="center">0.16</td><td align="center">4.48</td><td align="center">9.40</td><td align="center">6.940</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">8</td><td align="center">5.32</td><td align="center">5.23</td><td align="center">-0.09</td><td align="center">4.56</td><td align="center">9.38</td><td align="center">6.970</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">12</td><td align="center">5.81</td><td align="center">6.12</td><td align="center">0.31</td><td align="center">5.17</td><td align="center">10.33</td><td align="center">7.750</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">16</td><td align="center">11.40</td><td align="center">11.42</td><td align="center">0.02</td><td align="center">7.52</td><td align="center">14.52</td><td align="center">11.020</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">20</td><td align="center">28.57</td><td align="center">28.45</td><td align="center">-0.12</td><td align="center">25.32</td><td align="center">33.32</td><td align="center">29.320</td></tr>
-
-        <tr>
-            <td rowspan="42" align="center" valign="middle">2</td>
-            <td align="center">0</td><td align="center">20</td><td align="center">2</td><td align="center">6.00</td><td align="center">9.52</td><td align="center">3.52</td><td align="center">4.73</td><td align="center">11.09</td><td align="center">7.910</td>
-        </tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">4</td><td align="center">5.21</td><td align="center">7.84</td><td align="center">2.63</td><td align="center">4.54</td><td align="center">10.31</td><td align="center">7.425</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">6</td><td align="center">5.23</td><td align="center">6.23</td><td align="center">1.00</td><td align="center">4.69</td><td align="center">10.00</td><td align="center">7.345</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">8</td><td align="center">5.07</td><td align="center">6.59</td><td align="center">1.52</td><td align="center">4.87</td><td align="center">9.51</td><td align="center">7.190</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">12</td><td align="center">6.08</td><td align="center">6.41</td><td align="center">0.33</td><td align="center">5.44</td><td align="center">10.60</td><td align="center">8.020</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">16</td><td align="center">12.43</td><td align="center">12.36</td><td align="center">-0.07</td><td align="center">8.37</td><td align="center">16.48</td><td align="center">12.425</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">20</td><td align="center">26.86</td><td align="center">27.53</td><td align="center">0.67</td><td align="center">24.63</td><td align="center">34.52</td><td align="center">29.575</td></tr>
-        <tr><td align="center">0.5</td><td align="center">5</td><td align="center">2</td><td align="center">5.40</td><td align="center">7.02</td><td align="center">1.62</td><td align="center">5.11</td><td align="center">9.32</td><td align="center">7.215</td></tr>
-        <tr><td align="center">0.5</td><td align="center">5</td><td align="center">4</td><td align="center">5.43</td><td align="center">7.34</td><td align="center">1.91</td><td align="center">5.18</td><td align="center">9.41</td><td align="center">7.295</td></tr>
-        <tr><td align="center">0.5</td><td align="center">5</td><td align="center">6</td><td align="center">5.04</td><td align="center">6.76</td><td align="center">1.72</td><td align="center">5.09</td><td align="center">9.70</td><td align="center">7.395</td></tr>
-        <tr><td align="center">0.5</td><td align="center">5</td><td align="center">8</td><td align="center">5.23</td><td align="center">5.99</td><td align="center">0.76</td><td align="center">5.18</td><td align="center">9.51</td><td align="center">7.345</td></tr>
-        <tr><td align="center">0.5</td><td align="center">5</td><td align="center">12</td><td align="center">6.21</td><td align="center">6.42</td><td align="center">0.21</td><td align="center">5.49</td><td align="center">10.19</td><td align="center">7.840</td></tr>
-        <tr><td align="center">0.5</td><td align="center">5</td><td align="center">16</td><td align="center">9.18</td><td align="center">9.63</td><td align="center">0.45</td><td align="center">8.58</td><td align="center">14.65</td><td align="center">11.615</td></tr>
-        <tr><td align="center">0.5</td><td align="center">5</td><td align="center">20</td><td align="center">50.40</td><td align="center">50.97</td><td align="center">0.57</td><td align="center">69.98</td><td align="center">70.66</td><td align="center">70.320</td></tr>
-        <tr><td align="center">0.5</td><td align="center">10</td><td align="center">2</td><td align="center">5.40</td><td align="center">7.10</td><td align="center">1.70</td><td align="center">5.11</td><td align="center">9.30</td><td align="center">7.205</td></tr>
-        <tr><td align="center">0.5</td><td align="center">10</td><td align="center">4</td><td align="center">5.32</td><td align="center">6.91</td><td align="center">1.59</td><td align="center">5.19</td><td align="center">9.61</td><td align="center">7.400</td></tr>
-        <tr><td align="center">0.5</td><td align="center">10</td><td align="center">6</td><td align="center">5.04</td><td align="center">6.63</td><td align="center">1.59</td><td align="center">5.04</td><td align="center">9.67</td><td align="center">7.355</td></tr>
-        <tr><td align="center">0.5</td><td align="center">10</td><td align="center">8</td><td align="center">5.27</td><td align="center">6.00</td><td align="center">0.73</td><td align="center">4.62</td><td align="center">9.50</td><td align="center">7.060</td></tr>
-        <tr><td align="center">0.5</td><td align="center">10</td><td align="center">12</td><td align="center">6.29</td><td align="center">6.38</td><td align="center">0.09</td><td align="center">5.06</td><td align="center">10.22</td><td align="center">7.640</td></tr>
-        <tr><td align="center">0.5</td><td align="center">10</td><td align="center">16</td><td align="center">10.22</td><td align="center">10.87</td><td align="center">0.65</td><td align="center">8.65</td><td align="center">14.96</td><td align="center">11.805</td></tr>
-        <tr><td align="center">0.5</td><td align="center">10</td><td align="center">20</td><td align="center">85.55</td><td align="center">89.97</td><td align="center">4.42</td><td align="center">88.93</td><td align="center">85.49</td><td align="center">87.210</td></tr>
-        <tr><td align="center">0.5</td><td align="center">15</td><td align="center">2</td><td align="center">5.40</td><td align="center">7.43</td><td align="center">2.03</td><td align="center">5.12</td><td align="center">9.30</td><td align="center">7.210</td></tr>
-        <tr><td align="center">0.5</td><td align="center">15</td><td align="center">4</td><td align="center">5.15</td><td align="center">6.63</td><td align="center">1.48</td><td align="center">5.21</td><td align="center">9.58</td><td align="center">7.395</td></tr>
-        <tr><td align="center">0.5</td><td align="center">15</td><td align="center">6</td><td align="center">5.12</td><td align="center">5.91</td><td align="center">0.79</td><td align="center">4.98</td><td align="center">9.46</td><td align="center">7.220</td></tr>
-        <tr><td align="center">0.5</td><td align="center">15</td><td align="center">8</td><td align="center">5.07</td><td align="center">5.67</td><td align="center">0.60</td><td align="center">4.77</td><td align="center">9.27</td><td align="center">7.020</td></tr>
-        <tr><td align="center">0.5</td><td align="center">15</td><td align="center">12</td><td align="center">5.79</td><td align="center">6.14</td><td align="center">0.35</td><td align="center">5.04</td><td align="center">9.84</td><td align="center">7.440</td></tr>
-        <tr><td align="center">0.5</td><td align="center">15</td><td align="center">16</td><td align="center">8.27</td><td align="center">8.84</td><td align="center">0.57</td><td align="center">6.99</td><td align="center">12.89</td><td align="center">9.940</td></tr>
-        <tr><td align="center">0.5</td><td align="center">15</td><td align="center">20</td><td align="center">33.58</td><td align="center">35.59</td><td align="center">2.01</td><td align="center">22.72</td><td align="center">27.96</td><td align="center">25.340</td></tr>
-        <tr><td align="center">0.5</td><td align="center">25</td><td align="center">2</td><td align="center">5.39</td><td align="center">7.40</td><td align="center">2.01</td><td align="center">5.13</td><td align="center">9.33</td><td align="center">7.230</td></tr>
-        <tr><td align="center">0.5</td><td align="center">25</td><td align="center">4</td><td align="center">5.28</td><td align="center">6.00</td><td align="center">0.72</td><td align="center">5.21</td><td align="center">9.57</td><td align="center">7.390</td></tr>
-        <tr><td align="center">0.5</td><td align="center">25</td><td align="center">6</td><td align="center">5.08</td><td align="center">5.68</td><td align="center">0.60</td><td align="center">4.70</td><td align="center">9.18</td><td align="center">6.940</td></tr>
-        <tr><td align="center">0.5</td><td align="center">25</td><td align="center">8</td><td align="center">5.28</td><td align="center">5.34</td><td align="center">0.06</td><td align="center">4.84</td><td align="center">9.33</td><td align="center">7.085</td></tr>
-        <tr><td align="center">0.5</td><td align="center">25</td><td align="center">12</td><td align="center">5.74</td><td align="center">6.04</td><td align="center">0.30</td><td align="center">5.12</td><td align="center">10.01</td><td align="center">7.565</td></tr>
-        <tr><td align="center">0.5</td><td align="center">25</td><td align="center">16</td><td align="center">10.26</td><td align="center">10.50</td><td align="center">0.24</td><td align="center">8.25</td><td align="center">14.64</td><td align="center">11.445</td></tr>
-        <tr><td align="center">0.5</td><td align="center">25</td><td align="center">20</td><td align="center">31.01</td><td align="center">30.48</td><td align="center">-0.53</td><td align="center">28.03</td><td align="center">35.84</td><td align="center">31.935</td></tr>
-        <tr><td align="center">0.5</td><td align="center">30</td><td align="center">2</td><td align="center">5.32</td><td align="center">7.38</td><td align="center">2.06</td><td align="center">5.14</td><td align="center">9.28</td><td align="center">7.210</td></tr>
-        <tr><td align="center">0.5</td><td align="center">30</td><td align="center">4</td><td align="center">5.12</td><td align="center">6.06</td><td align="center">0.94</td><td align="center">5.14</td><td align="center">9.48</td><td align="center">7.310</td></tr>
-        <tr><td align="center">0.5</td><td align="center">30</td><td align="center">6</td><td align="center">5.00</td><td align="center">5.51</td><td align="center">0.51</td><td align="center">4.70</td><td align="center">9.54</td><td align="center">7.120</td></tr>
-        <tr><td align="center">0.5</td><td align="center">30</td><td align="center">8</td><td align="center">4.97</td><td align="center">5.39</td><td align="center">0.42</td><td align="center">4.74</td><td align="center">9.28</td><td align="center">7.010</td></tr>
-        <tr><td align="center">0.5</td><td align="center">30</td><td align="center">12</td><td align="center">4.97</td><td align="center">5.20</td><td align="center">0.23</td><td align="center">4.83</td><td align="center">9.33</td><td align="center">7.080</td></tr>
-        <tr><td align="center">0.5</td><td align="center">30</td><td align="center">16</td><td align="center">5.49</td><td align="center">5.78</td><td align="center">0.29</td><td align="center">5.11</td><td align="center">10.00</td><td align="center">7.555</td></tr>
-        <tr><td align="center">0.5</td><td align="center">30</td><td align="center">20</td><td align="center">8.77</td><td align="center">9.11</td><td align="center">0.34</td><td align="center">8.16</td><td align="center">14.73</td><td align="center">11.445</td></tr>
-
-        <tr>
-            <td rowspan="14" align="center" valign="middle">3</td>
-            <td align="center">0</td><td align="center">20</td><td align="center">2</td><td align="center">6.65</td><td align="center">8.19</td><td align="center">1.54</td><td align="center">5.29</td><td align="center">10.17</td><td align="center">7.730</td>
-        </tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">4</td><td align="center">6.40</td><td align="center">7.98</td><td align="center">1.58</td><td align="center">5.39</td><td align="center">10.46</td><td align="center">7.925</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">6</td><td align="center">5.86</td><td align="center">5.80</td><td align="center">-0.06</td><td align="center">5.17</td><td align="center">9.96</td><td align="center">7.565</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">8</td><td align="center">5.98</td><td align="center">6.24</td><td align="center">0.26</td><td align="center">5.60</td><td align="center">9.96</td><td align="center">7.780</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">12</td><td align="center">5.90</td><td align="center">5.90</td><td align="center">0.00</td><td align="center">5.30</td><td align="center">10.79</td><td align="center">8.045</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">16</td><td align="center">10.59</td><td align="center">10.80</td><td align="center">0.21</td><td align="center">8.15</td><td align="center">14.97</td><td align="center">11.560</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">20</td><td align="center">47.64</td><td align="center">50.85</td><td align="center">3.21</td><td align="center">34.07</td><td align="center">39.66</td><td align="center">36.865</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">2</td><td align="center">5.75</td><td align="center">7.17</td><td align="center">1.42</td><td align="center">5.03</td><td align="center">9.88</td><td align="center">7.455</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">4</td><td align="center">6.16</td><td align="center">6.43</td><td align="center">0.27</td><td align="center">4.98</td><td align="center">9.63</td><td align="center">7.305</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">6</td><td align="center">5.69</td><td align="center">5.76</td><td align="center">0.07</td><td align="center">4.66</td><td align="center">9.28</td><td align="center">6.970</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">8</td><td align="center">5.18</td><td align="center">5.31</td><td align="center">0.13</td><td align="center">4.73</td><td align="center">9.36</td><td align="center">7.045</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">12</td><td align="center">5.67</td><td align="center">6.00</td><td align="center">0.33</td><td align="center">4.88</td><td align="center">9.92</td><td align="center">7.400</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">16</td><td align="center">10.52</td><td align="center">10.40</td><td align="center">-0.12</td><td align="center">7.87</td><td align="center">13.55</td><td align="center">10.710</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">20</td><td align="center">41.32</td><td align="center">43.60</td><td align="center">2.28</td><td align="center">37.21</td><td align="center">41.00</td><td align="center">39.105</td></tr>
-
-        <tr>
-            <td rowspan="14" align="center" valign="middle">4</td>
-            <td align="center">0</td><td align="center">20</td><td align="center">2</td><td align="center">5.98</td><td align="center">7.03</td><td align="center">1.05</td><td align="center">4.66</td><td align="center">11.12</td><td align="center">7.890</td>
-        </tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">4</td><td align="center">5.25</td><td align="center">6.42</td><td align="center">1.17</td><td align="center">4.68</td><td align="center">9.99</td><td align="center">7.335</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">6</td><td align="center">5.16</td><td align="center">5.82</td><td align="center">0.66</td><td align="center">4.73</td><td align="center">9.80</td><td align="center">7.265</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">8</td><td align="center">4.93</td><td align="center">5.44</td><td align="center">0.51</td><td align="center">4.79</td><td align="center">9.97</td><td align="center">7.380</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">12</td><td align="center">5.65</td><td align="center">5.82</td><td align="center">0.17</td><td align="center">5.05</td><td align="center">10.25</td><td align="center">7.650</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">16</td><td align="center">8.96</td><td align="center">9.04</td><td align="center">0.08</td><td align="center">5.91</td><td align="center">11.88</td><td align="center">8.895</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">20</td><td align="center">28.08</td><td align="center">33.50</td><td align="center">5.42</td><td align="center">12.02</td><td align="center">20.06</td><td align="center">16.040</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">2</td><td align="center">7.13</td><td align="center">8.17</td><td align="center">1.04</td><td align="center">4.55</td><td align="center">9.42</td><td align="center">6.985</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">4</td><td align="center">7.02</td><td align="center">7.82</td><td align="center">0.80</td><td align="center">4.70</td><td align="center">9.08</td><td align="center">6.890</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">6</td><td align="center">5.56</td><td align="center">7.94</td><td align="center">2.38</td><td align="center">4.69</td><td align="center">9.13</td><td align="center">6.910</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">8</td><td align="center">5.69</td><td align="center">7.58</td><td align="center">1.89</td><td align="center">4.79</td><td align="center">9.25</td><td align="center">7.020</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">12</td><td align="center">6.22</td><td align="center">6.81</td><td align="center">0.59</td><td align="center">5.04</td><td align="center">9.72</td><td align="center">7.380</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">16</td><td align="center">9.05</td><td align="center">9.34</td><td align="center">0.29</td><td align="center">6.33</td><td align="center">11.78</td><td align="center">9.055</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">20</td><td align="center">51.13</td><td align="center">63.88</td><td align="center">12.75</td><td align="center">60.52</td><td align="center">54.45</td><td align="center">57.485</td></tr>
-
-        <tr>
-            <td rowspan="14" align="center" valign="middle">5</td>
-            <td align="center">0</td><td align="center">20</td><td align="center">2</td><td align="center">98.96</td><td align="center">8.52</td><td align="center">-90.44</td><td align="center">4.58</td><td align="center">10.36</td><td align="center">7.470</td>
-        </tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">4</td><td align="center">12.70</td><td align="center">6.60</td><td align="center">-6.10</td><td align="center">4.59</td><td align="center">10.19</td><td align="center">7.390</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">6</td><td align="center">6.04</td><td align="center">6.87</td><td align="center">0.83</td><td align="center">4.59</td><td align="center">9.84</td><td align="center">7.215</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">8</td><td align="center">5.34</td><td align="center">6.20</td><td align="center">0.86</td><td align="center">4.67</td><td align="center">9.85</td><td align="center">7.260</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">12</td><td align="center">6.01</td><td align="center">6.17</td><td align="center">0.16</td><td align="center">4.84</td><td align="center">9.70</td><td align="center">7.270</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">16</td><td align="center">10.59</td><td align="center">10.11</td><td align="center">-0.48</td><td align="center">5.98</td><td align="center">11.50</td><td align="center">8.740</td></tr>
-        <tr><td align="center">0</td><td align="center">20</td><td align="center">20</td><td align="center">21.77</td><td align="center">21.42</td><td align="center">-0.35</td><td align="center">11.41</td><td align="center">17.27</td><td align="center">14.340</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">2</td><td align="center">7.85</td><td align="center">9.34</td><td align="center">1.49</td><td align="center">5.31</td><td align="center">9.08</td><td align="center">7.195</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">4</td><td align="center">5.99</td><td align="center">7.90</td><td align="center">1.91</td><td align="center">4.67</td><td align="center">9.15</td><td align="center">6.910</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">6</td><td align="center">5.03</td><td align="center">6.03</td><td align="center">1.00</td><td align="center">4.66</td><td align="center">9.05</td><td align="center">6.855</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">8</td><td align="center">4.96</td><td align="center">5.51</td><td align="center">0.55</td><td align="center">4.55</td><td align="center">9.24</td><td align="center">6.895</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">12</td><td align="center">5.44</td><td align="center">5.80</td><td align="center">0.36</td><td align="center">4.88</td><td align="center">9.74</td><td align="center">7.310</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">16</td><td align="center">9.06</td><td align="center">9.54</td><td align="center">0.48</td><td align="center">7.12</td><td align="center">12.79</td><td align="center">9.955</td></tr>
-        <tr><td align="center">0.5</td><td align="center">20</td><td align="center">20</td><td align="center">57.88</td><td align="center">72.60</td><td align="center">14.72</td><td align="center">50.96</td><td align="center">54.77</td><td align="center">52.865</td></tr>
-    </tbody>
-</table>
+| N_Whisper | Dropout | WER | Alpha | Ordinary | Attack | Diff | Clean | Other | Avg(C/O) |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 1 | 0 | 20 | 2 | 5.75 | 6.01 | 0.26 | 4.67 | 9.22 | 6.945 |
+| 1 | 0 | 20 | 4 | 5.22 | 5.84 | 0.62 | 4.98 | 9.23 | 7.105 |
+| 1 | 0 | 20 | 6 | 5.45 | 5.45 | 0.00 | 4.74 | 9.35 | 7.045 |
+| 1 | 0 | 20 | 8 | 5.69 | 5.50 | -0.19 | 4.71 | 9.57 | 7.140 |
+| 1 | 0 | 20 | 12 | 6.51 | 6.31 | -0.20 | 5.07 | 10.28 | 7.675 |
+| 1 | 0 | 20 | 16 | 11.09 | 11.05 | -0.04 | 6.77 | 13.19 | 9.980 |
+| 1 | 0 | 20 | 20 | 26.77 | 27.52 | 0.75 | 19.27 | 28.19 | 23.730 |
+| 1 | 0.5 | 20 | 2 | 6.44 | 6.15 | -0.29 | 4.98 | 9.64 | 7.310 |
+| 1 | 0.5 | 20 | 4 | 6.45 | 6.01 | -0.44 | 4.45 | 9.28 | 6.865 |
+| 1 | 0.5 | 20 | 6 | 4.98 | 5.14 | 0.16 | 4.48 | 9.40 | 6.940 |
+| 1 | 0.5 | 20 | 8 | 5.32 | 5.23 | -0.09 | 4.56 | 9.38 | 6.970 |
+| 1 | 0.5 | 20 | 12 | 5.81 | 6.12 | 0.31 | 5.17 | 10.33 | 7.750 |
+| 1 | 0.5 | 20 | 16 | 11.40 | 11.42 | 0.02 | 7.52 | 14.52 | 11.020 |
+| 1 | 0.5 | 20 | 20 | 28.57 | 28.45 | -0.12 | 25.32 | 33.32 | 29.320 |
+| 2 | 0 | 20 | 2 | 6.00 | 9.52 | 3.52 | 4.73 | 11.09 | 7.910 |
+| 2 | 0 | 20 | 4 | 5.21 | 7.84 | 2.63 | 4.54 | 10.31 | 7.425 |
+| 2 | 0 | 20 | 6 | 5.23 | 6.23 | 1.00 | 4.69 | 10.00 | 7.345 |
+| 2 | 0 | 20 | 8 | 5.07 | 6.59 | 1.52 | 4.87 | 9.51 | 7.190 |
+| 2 | 0 | 20 | 12 | 6.08 | 6.41 | 0.33 | 5.44 | 10.60 | 8.020 |
+| 2 | 0 | 20 | 16 | 12.43 | 12.36 | -0.07 | 8.37 | 16.48 | 12.425 |
+| 2 | 0 | 20 | 20 | 26.86 | 27.53 | 0.67 | 24.63 | 34.52 | 29.575 |
+| 2 | 0.5 | 5 | 2 | 5.40 | 7.02 | 1.62 | 5.11 | 9.32 | 7.215 |
+| 2 | 0.5 | 5 | 4 | 5.43 | 7.34 | 1.91 | 5.18 | 9.41 | 7.295 |
+| 2 | 0.5 | 5 | 6 | 5.04 | 6.76 | 1.72 | 5.09 | 9.70 | 7.395 |
+| 2 | 0.5 | 5 | 8 | 5.23 | 5.99 | 0.76 | 5.18 | 9.51 | 7.345 |
+| 2 | 0.5 | 5 | 12 | 6.21 | 6.42 | 0.21 | 5.49 | 10.19 | 7.840 |
+| 2 | 0.5 | 5 | 16 | 9.18 | 9.63 | 0.45 | 8.58 | 14.65 | 11.615 |
+| 2 | 0.5 | 5 | 20 | 50.40 | 50.97 | 0.57 | 69.98 | 70.66 | 70.320 |
+| 2 | 0.5 | 10 | 2 | 5.40 | 7.10 | 1.70 | 5.11 | 9.30 | 7.205 |
+| 2 | 0.5 | 10 | 4 | 5.32 | 6.91 | 1.59 | 5.19 | 9.61 | 7.400 |
+| 2 | 0.5 | 10 | 6 | 5.04 | 6.63 | 1.59 | 5.04 | 9.67 | 7.355 |
+| 2 | 0.5 | 10 | 8 | 5.27 | 6.00 | 0.73 | 4.62 | 9.50 | 7.060 |
+| 2 | 0.5 | 10 | 12 | 6.29 | 6.38 | 0.09 | 5.06 | 10.22 | 7.640 |
+| 2 | 0.5 | 10 | 16 | 10.22 | 10.87 | 0.65 | 8.65 | 14.96 | 11.805 |
+| 2 | 0.5 | 10 | 20 | 85.55 | 89.97 | 4.42 | 88.93 | 85.49 | 87.210 |
+| 2 | 0.5 | 15 | 2 | 5.40 | 7.43 | 2.03 | 5.12 | 9.30 | 7.210 |
+| 2 | 0.5 | 15 | 4 | 5.15 | 6.63 | 1.48 | 5.21 | 9.58 | 7.395 |
+| 2 | 0.5 | 15 | 6 | 5.12 | 5.91 | 0.79 | 4.98 | 9.46 | 7.220 |
+| 2 | 0.5 | 15 | 8 | 5.07 | 5.67 | 0.60 | 4.77 | 9.27 | 7.020 |
+| 2 | 0.5 | 15 | 12 | 5.79 | 6.14 | 0.35 | 5.04 | 9.84 | 7.440 |
+| 2 | 0.5 | 15 | 16 | 8.27 | 8.84 | 0.57 | 6.99 | 12.89 | 9.940 |
+| 2 | 0.5 | 15 | 20 | 33.58 | 35.59 | 2.01 | 22.72 | 27.96 | 25.340 |
+| 2 | 0.5 | 25 | 2 | 5.39 | 7.40 | 2.01 | 5.13 | 9.33 | 7.230 |
+| 2 | 0.5 | 25 | 4 | 5.28 | 6.00 | 0.72 | 5.21 | 9.57 | 7.390 |
+| 2 | 0.5 | 25 | 6 | 5.08 | 5.68 | 0.60 | 4.70 | 9.18 | 6.940 |
+| 2 | 0.5 | 25 | 8 | 5.28 | 5.34 | 0.06 | 4.84 | 9.33 | 7.085 |
+| 2 | 0.5 | 25 | 12 | 5.74 | 6.04 | 0.30 | 5.12 | 10.01 | 7.565 |
+| 2 | 0.5 | 25 | 16 | 10.26 | 10.50 | 0.24 | 8.25 | 14.64 | 11.445 |
+| 2 | 0.5 | 25 | 20 | 31.01 | 30.48 | -0.53 | 28.03 | 35.84 | 31.935 |
+| 2 | 0.5 | 30 | 2 | 5.32 | 7.38 | 2.06 | 5.14 | 9.28 | 7.210 |
+| 2 | 0.5 | 30 | 4 | 5.12 | 6.06 | 0.94 | 5.14 | 9.48 | 7.310 |
+| 2 | 0.5 | 30 | 6 | 5.00 | 5.51 | 0.51 | 4.70 | 9.54 | 7.120 |
+| 2 | 0.5 | 30 | 8 | 4.97 | 5.39 | 0.42 | 4.74 | 9.28 | 7.010 |
+| 2 | 0.5 | 30 | 12 | 4.97 | 5.20 | 0.23 | 4.83 | 9.33 | 7.080 |
+| 2 | 0.5 | 30 | 16 | 5.49 | 5.78 | 0.29 | 5.11 | 10.00 | 7.555 |
+| 2 | 0.5 | 30 | 20 | 8.77 | 9.11 | 0.34 | 8.16 | 14.73 | 11.445 |
+| 3 | 0 | 20 | 2 | 6.65 | 8.19 | 1.54 | 5.29 | 10.17 | 7.730 |
+| 3 | 0 | 20 | 4 | 6.40 | 7.98 | 1.58 | 5.39 | 10.46 | 7.925 |
+| 3 | 0 | 20 | 6 | 5.86 | 5.80 | -0.06 | 5.17 | 9.96 | 7.565 |
+| 3 | 0 | 20 | 8 | 5.98 | 6.24 | 0.26 | 5.60 | 9.96 | 7.780 |
+| 3 | 0 | 20 | 12 | 5.90 | 5.90 | 0.00 | 5.30 | 10.79 | 8.045 |
+| 3 | 0 | 20 | 16 | 10.59 | 10.80 | 0.21 | 8.15 | 14.97 | 11.560 |
+| 3 | 0 | 20 | 20 | 47.64 | 50.85 | 3.21 | 34.07 | 39.66 | 36.865 |
+| 3 | 0.5 | 20 | 2 | 5.75 | 7.17 | 1.42 | 5.03 | 9.88 | 7.455 |
+| 3 | 0.5 | 20 | 4 | 6.16 | 6.43 | 0.27 | 4.98 | 9.63 | 7.305 |
+| 3 | 0.5 | 20 | 6 | 5.69 | 5.76 | 0.07 | 4.66 | 9.28 | 6.970 |
+| 3 | 0.5 | 20 | 8 | 5.18 | 5.31 | 0.13 | 4.73 | 9.36 | 7.045 |
+| 3 | 0.5 | 20 | 12 | 5.67 | 6.00 | 0.33 | 4.88 | 9.92 | 7.400 |
+| 3 | 0.5 | 20 | 16 | 10.52 | 10.40 | -0.12 | 7.87 | 13.55 | 10.710 |
+| 3 | 0.5 | 20 | 20 | 41.32 | 43.60 | 2.28 | 37.21 | 41.00 | 39.105 |
+| 4 | 0 | 20 | 2 | 5.98 | 7.03 | 1.05 | 4.66 | 11.12 | 7.890 |
+| 4 | 0 | 20 | 4 | 5.25 | 6.42 | 1.17 | 4.68 | 9.99 | 7.335 |
+| 4 | 0 | 20 | 6 | 5.16 | 5.82 | 0.66 | 4.73 | 9.80 | 7.265 |
+| 4 | 0 | 20 | 8 | 4.93 | 5.44 | 0.51 | 4.79 | 9.97 | 7.380 |
+| 4 | 0 | 20 | 12 | 5.65 | 5.82 | 0.17 | 5.05 | 10.25 | 7.650 |
+| 4 | 0 | 20 | 16 | 8.96 | 9.04 | 0.08 | 5.91 | 11.88 | 8.895 |
+| 4 | 0 | 20 | 20 | 28.08 | 33.50 | 5.42 | 12.02 | 20.06 | 16.040 |
+| 4 | 0.5 | 20 | 2 | 7.13 | 8.17 | 1.04 | 4.55 | 9.42 | 6.985 |
+| 4 | 0.5 | 20 | 4 | 7.02 | 7.82 | 0.80 | 4.70 | 9.08 | 6.890 |
+| 4 | 0.5 | 20 | 6 | 5.56 | 7.94 | 2.38 | 4.69 | 9.13 | 6.910 |
+| 4 | 0.5 | 20 | 8 | 5.69 | 7.58 | 1.89 | 4.79 | 9.25 | 7.020 |
+| 4 | 0.5 | 20 | 12 | 6.22 | 6.81 | 0.59 | 5.04 | 9.72 | 7.380 |
+| 4 | 0.5 | 20 | 16 | 9.05 | 9.34 | 0.29 | 6.33 | 11.78 | 9.055 |
+| 4 | 0.5 | 20 | 20 | 51.13 | 63.88 | 12.75 | 60.52 | 54.45 | 57.485 |
+| 5 | 0 | 20 | 2 | 98.96 | 8.52 | -90.44 | 4.58 | 10.36 | 7.470 |
+| 5 | 0 | 20 | 4 | 12.70 | 6.60 | -6.10 | 4.59 | 10.19 | 7.390 |
+| 5 | 0 | 20 | 6 | 6.04 | 6.87 | 0.83 | 4.59 | 9.84 | 7.215 |
+| 5 | 0 | 20 | 8 | 5.34 | 6.20 | 0.86 | 4.67 | 9.85 | 7.260 |
+| 5 | 0 | 20 | 12 | 6.01 | 6.17 | 0.16 | 4.84 | 9.70 | 7.270 |
+| 5 | 0 | 20 | 16 | 10.59 | 10.11 | -0.48 | 5.98 | 11.50 | 8.740 |
+| 5 | 0 | 20 | 20 | 21.77 | 21.42 | -0.35 | 11.41 | 17.27 | 14.340 |
+| 5 | 0.5 | 20 | 2 | 7.85 | 9.34 | 1.49 | 5.31 | 9.08 | 7.195 |
+| 5 | 0.5 | 20 | 4 | 5.99 | 7.90 | 1.91 | 4.67 | 9.15 | 6.910 |
+| 5 | 0.5 | 20 | 6 | 5.03 | 6.03 | 1.00 | 4.66 | 9.05 | 6.855 |
+| 5 | 0.5 | 20 | 8 | 4.96 | 5.51 | 0.55 | 4.55 | 9.24 | 6.895 |
+| 5 | 0.5 | 20 | 12 | 5.44 | 5.80 | 0.36 | 4.88 | 9.74 | 7.310 |
+| 5 | 0.5 | 20 | 16 | 9.06 | 9.54 | 0.48 | 7.12 | 12.79 | 9.955 |
+| 5 | 0.5 | 20 | 20 | 57.88 | 72.60 | 14.72 | 50.96 | 54.77 | 52.865 |
