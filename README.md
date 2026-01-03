@@ -19,15 +19,7 @@ Contextual Speech LLMs
     <tbody>
         <tr>
             <td rowspan="14" align="center" valign="middle">1</td>
-            <td align="center">0</td>
-            <td align="center">20</td>
-            <td align="center">2</td>
-            <td align="center">5.75</td>
-            <td align="center">6.01</td>
-            <td align="center">0.26</td>
-            <td align="center">4.67</td>
-            <td align="center">9.22</td>
-            <td align="center">6.945</td>
+            <td align="center">0</td><td align="center">20</td><td align="center">2</td><td align="center">5.75</td><td align="center">6.01</td><td align="center">0.26</td><td align="center">4.67</td><td align="center">9.22</td><td align="center">6.945</td>
         </tr>
         <tr><td align="center">0</td><td align="center">20</td><td align="center">4</td><td align="center">5.22</td><td align="center">5.84</td><td align="center">0.62</td><td align="center">4.98</td><td align="center">9.23</td><td align="center">7.105</td></tr>
         <tr><td align="center">0</td><td align="center">20</td><td align="center">6</td><td align="center">5.45</td><td align="center">5.45</td><td align="center">0.00</td><td align="center">4.74</td><td align="center">9.35</td><td align="center">7.045</td></tr>
