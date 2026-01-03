@@ -1,4 +1,4 @@
-| N_Whisper | Dropout | WER | Alpha | Ordinary | Attack | Diff | Clean | Other | Avg(C/O) |
+| N_Whisper | Dropout | WER | Alpha | TED-LIUM 3 (Attack/o) | TED-LIUM 3 (Attack/w) | gap | Test-clean | Test-other | LS-Ave. |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 1 | 0 | 20 | 2 | 5.75 | 6.01 | 0.26 | 4.67 | 9.22 | 6.945 |
 | 1 | 0 | 20 | 4 | 5.22 | 5.84 | 0.62 | 4.98 | 9.23 | 7.105 |
