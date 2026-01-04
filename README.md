@@ -14,11 +14,11 @@ Contextual automatic speech recognition (ASR) with Speech-LLMs is typically trai
       <th colspan="4" style="padding: 5px; border-bottom: 1px solid black;">0.5 Dropout WER (%)&darr;</th>
     </tr>
     <tr style="background-color: #f2f2f2;">
-      <th style="padding: 5px; border-bottom: 1px solid black;">TED</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">TED-LIUM 3</th>
       <th style="padding: 5px; border-bottom: 1px solid black;">Test-clean</th>
       <th style="padding: 5px; border-bottom: 1px solid black;">Test-other</th>
       <th style="padding: 5px; border-bottom: 1px solid black;">LS-Ave.</th>
-      <th style="padding: 5px; border-bottom: 1px solid black;">TED</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">TED-LIUM 3</th>
       <th style="padding: 5px; border-bottom: 1px solid black;">Test-clean</th>
       <th style="padding: 5px; border-bottom: 1px solid black;">Test-other</th>
       <th style="padding: 5px; border-bottom: 1px solid black;">LS-Ave.</th>
