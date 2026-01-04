@@ -2,41 +2,40 @@
 Contextual Speech LLMs
 
 ## Main Result
-
-<table border="1" style="border-collapse: collapse; width: 100%; text-align: center; font-family: Arial, sans-serif;">
-<caption style="caption-side: bottom; text-align: left; padding-top: 10px; font-size: 13px; color: #000;">
+<table border="1" style="border-collapse: collapse; width: 100%; text-align: center; font-family: Arial, sans-serif; font-size: 14px;">
+  <caption style="caption-side: bottom; text-align: left; padding-top: 10px; font-size: 13px; color: #000;">
     Table 1: WER comparison on TED-LIUM 3 and out-of-domain Librispeech dataset across different context window sizes (<i>N</i>). The column <b>Con<sub>inf</sub> / Con<sub>train</sub></b> specifies the source of history used during inference and training, respectively. <b>hyp</b> denotes using the model's own predictions as history during inference. Regarding training configuration, <b>GT</b> uses ground-truth history, while <b>Whisper</b> indicates the model was trained using context decoded by Whisper to simulate historical errors. <b>+ DPO</b> and <b>+ SFT2</b> are additional fine-tuning stages applied to the SFT model.
   </caption>
   <thead>
     <tr style="background-color: #f2f2f2;">
-      <th rowspan="2" style="vertical-align: middle; padding: 5px;">N</th>
-      <th rowspan="2" style="vertical-align: middle; padding: 5px;">Con<sub>inf</sub>/Con<sub>train</sub></th>
-      <th colspan="4" style="padding: 5px;">0 Dropout WER (%)&darr;</th>
-      <th colspan="4" style="padding: 5px;">0.5 Dropout WER (%)&darr;</th>
+      <th rowspan="2" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">N</th>
+      <th rowspan="2" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">Con<sub>inf</sub>/Con<sub>train</sub></th>
+      <th colspan="4" style="padding: 5px; border-bottom: 1px solid black;">0 Dropout WER (%)&darr;</th>
+      <th colspan="4" style="padding: 5px; border-bottom: 1px solid black;">0.5 Dropout WER (%)&darr;</th>
     </tr>
     <tr style="background-color: #f2f2f2;">
-      <th style="padding: 5px;">TED</th>
-      <th style="padding: 5px;">Test-clean</th>
-      <th style="padding: 5px;">Test-other</th>
-      <th style="padding: 5px;">LS-Ave.</th>
-      <th style="padding: 5px;">TED</th>
-      <th style="padding: 5px;">Test-clean</th>
-      <th style="padding: 5px;">Test-other</th>
-      <th style="padding: 5px;">LS-Ave.</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">TED</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">Test-clean</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">Test-other</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">LS-Ave.</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">TED</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">Test-clean</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">Test-other</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">LS-Ave.</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="padding: 5px;">0</td>
-      <td style="padding: 5px; text-align: left;">- / -</td>
-      <td style="padding: 5px;">7.89</td>
-      <td style="padding: 5px;">4.79</td>
-      <td style="padding: 5px;">9.83</td>
-      <td style="padding: 5px;">7.310</td>
-      <td style="padding: 5px;">-</td>
-      <td style="padding: 5px;">-</td>
-      <td style="padding: 5px;">-</td>
-      <td style="padding: 5px;">-</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">0</td>
+      <td style="padding: 5px; text-align: left; border-bottom: 1px solid black;">- / -</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">7.89</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">4.79</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">9.83</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">7.310</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">-</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">-</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">-</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">-</td>
     </tr>
     <tr>
       <td rowspan="5" style="vertical-align: middle; border-bottom: 1px solid black; padding: 5px;">1</td>
