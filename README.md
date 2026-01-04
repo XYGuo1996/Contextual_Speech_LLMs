@@ -4,6 +4,9 @@ Contextual Speech LLMs
 ## Main Result
 
 <table border="1" style="border-collapse: collapse; width: 100%; text-align: center; font-family: Arial, sans-serif;">
+<caption style="caption-side: bottom; text-align: left; padding-top: 10px; font-size: 13px; color: #000;">
+    Table 1: WER comparison on TED-LIUM 3 and out-of-domain Librispeech dataset across different context window sizes (<i>N</i>). The column <b>Con<sub>inf</sub> / Con<sub>train</sub></b> specifies the source of history used during inference and training, respectively. <b>hyp</b> denotes using the model's own predictions as history during inference. Regarding training configuration, <b>GT</b> uses ground-truth history, while <b>Whisper</b> indicates the model was trained using context decoded by Whisper to simulate historical errors. <b>+ DPO</b> and <b>+ SFT2</b> are additional fine-tuning stages applied to the SFT model.
+  </caption>
   <thead>
     <tr style="background-color: #f2f2f2;">
       <th rowspan="2" style="vertical-align: middle; padding: 5px;">N</th>
