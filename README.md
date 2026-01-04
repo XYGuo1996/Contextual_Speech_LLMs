@@ -1,6 +1,6 @@
 # From Oracle to Noisy Context: Mitigating Contextual Exposure Bias in Speech-LLMs
 Contextual automatic speech recognition (ASR) with Speech-LLMs is typically trained with oracle conversation history, but relies on error-prone history at inference, causing a train–test mismatch in the context channel that we term contextual exposure bias. We propose a unified training framework to improve robustness under realistic histories: (i) Teacher Error Knowledge by using Whisper large-v3 hypotheses as training-time history, (ii) Context Dropout to regularize over-reliance on history, and (iii) Direct Preference Optimization (DPO) on curated failure cases. Experiments on TED-LIUM 3 (in-domain) and zero-shot LibriSpeech (out-of-domain) show consistent gains under predicted-history decoding. With a two-utterance history, SFT with Whisper histories reduce WER from 5.59\% (oracle-history training) to 5.47\%, and DPO further improves to 5.17\%. Under irrelevant-history attacks, DPO yields the smallest degradation (5.17\% $\rightarrow$ 5.63\%), indicating improved robustness to misleading context.
-
+<img src="fig/model.png" alt="model arc" width="60%">
 ## Main Result
 <table border="1" style="border-collapse: collapse; width: 100%; text-align: center; font-family: Arial, sans-serif; font-size: 14px;">
   <caption style="caption-side: bottom; text-align: left; padding-top: 10px; font-size: 13px; color: #000;">
