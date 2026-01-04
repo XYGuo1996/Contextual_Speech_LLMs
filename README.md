@@ -8,7 +8,7 @@ Contextual automatic speech recognition (ASR) with Speech-LLMs is typically trai
   </caption>
   <thead>
     <tr style="background-color: #f2f2f2;">
-      <th rowspan="2" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">N</th>
+      <th rowspan="2" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;"><i>N</i></th>
       <th rowspan="2" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">Con<sub>inf</sub>/Con<sub>train</sub></th>
       <th colspan="4" style="padding: 5px; border-bottom: 1px solid black;">0 Dropout WER (%)&darr;</th>
       <th colspan="4" style="padding: 5px; border-bottom: 1px solid black;">0.5 Dropout WER (%)&darr;</th>
