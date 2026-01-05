@@ -795,12 +795,12 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
     </tr>
     <tr>
       <td style="padding: 4px; border-right: 1px solid black;">0.5</td>
-      <td">10.26</td>
-      <td">10.50</td>
+      <td>10.26</td>
+      <td>10.50</td>
       <td style="padding: 4px; border-right: 1px solid black;">0.24</td>
-      <td">8.25</td>
-      <td">14.64</td>
-      <td">11.445</td>
+      <td>8.25</td>
+      <td>14.64</td>
+      <td>11.445</td>
     </tr>
     <tr style="border-bottom: 1px solid black;">
       <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0.625</td>
