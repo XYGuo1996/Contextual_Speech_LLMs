@@ -597,7 +597,7 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
 ### Data Selection and Inference Scaling for DPO
 <table border="1" style="border-collapse: collapse; width: 100%; text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 13px; color: #000; border: 1px solid black;">
   <caption style="caption-side: bottom; text-align: left; padding-top: 10px; font-size: 13px; color: #000;">
-    Table 4: Impact of Hard Negatives threshold and DPO LoRA scaling factor (&gamma;) during inference. TED-LIUM 3 Gap denotes the WER degradation caused by irrelevant context attacks.
+    Table 4: Impact of Hard Negatives threshold and DPO LoRA scaling factor (&gamma;) during inference. TED-LIUM 3 Gap denotes the WER degradation caused by irrelevant context attacks. (N=2 and dropout rate=0.5)
   </caption>
   <thead>
     <tr style="border-bottom: 1px solid black;">
