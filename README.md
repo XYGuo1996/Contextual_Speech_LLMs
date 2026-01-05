@@ -345,12 +345,12 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
       <th colspan="3" style="padding: 5px; border-bottom: 1px solid black;">LibriSpeech (WER %) &darr;</th>
     </tr>
     <tr style="border-bottom: 1px solid black;">
-      <th style="padding: 5px;">Attacks/o</th>
-      <th style="padding: 5px;">Attacks/w</th>
-      <th style="padding: 5px; border-right: 1px solid black;">Gap &darr;</th>
-      <th style="padding: 5px;">Test-clean</th>
-      <th style="padding: 5px;">Test-other</th>
-      <th style="padding: 5px;">Ave.</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">Attacks/o</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">Attacks/w</th>
+      <th style="padding: 5px; border-right: 1px solid black; border-bottom: 1px solid black;">Gap &darr;</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">Test-clean</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">Test-other</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">Ave.</th>
     </tr>
   </thead>
   <tbody>
@@ -418,13 +418,13 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
       <td style="padding: 5px;">9.290</td>
     </tr>
     <tr style="border-bottom: 1px solid black;">
-      <td style="padding: 5px; border-right: 1px solid black;">0.625</td>
-      <td style="padding: 5px;">53.26</td>
-      <td style="padding: 5px;">57.15</td>
-      <td style="padding: 5px; border-right: 1px solid black;">3.89</td>
-      <td style="padding: 5px;">27.11</td>
-      <td style="padding: 5px;">28.96</td>
-      <td style="padding: 5px;">28.035</td>
+      <td style="padding: 5px; border-right: 1px solid black; border-bottom: 1px solid black;">0.625</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">53.26</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">57.15</td>
+      <td style="padding: 5px; border-right: 1px solid black; border-bottom: 1px solid black;">3.89</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">27.11</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">28.96</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">28.035</td>
     </tr>
   </tbody>
 </table>
@@ -442,18 +442,18 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
       <th colspan="3" style="padding: 5px; border-bottom: 1px solid black;">0.5 Dropout WER (%)&darr;</th>
     </tr>
     <tr style="border-bottom: 1px solid black;">
-      <th style="padding: 5px;">Attacks/o</th>
-      <th style="padding: 5px;">Attacks/w</th>
-      <th style="padding: 5px; border-right: 1px solid black;">Gap &darr;</th>
-      <th style="padding: 5px;">Attacks/o</th>
-      <th style="padding: 5px;">Attacks/w</th>
-      <th style="padding: 5px;">Gap &darr;</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">Attacks/o</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">Attacks/w</th>
+      <th style="padding: 5px; border-right: 1px solid black; border-bottom: 1px solid black;">Gap &darr;</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">Attacks/o</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">Attacks/w</th>
+      <th style="padding: 5px; border-bottom: 1px solid black;">Gap &darr;</th>
     </tr>
   </thead>
   <tbody>
     <tr style="border-bottom: 1px solid black;">
       <td rowspan="3" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">1</td>
-      <td style="padding: 5px; text-align: left; border-bottom: 1px solid black; border-right: 1px solid black;">hyp / GT</td>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">hyp / GT</td>
       <td style="padding: 5px;">5.85</td>
       <td style="padding: 5px;">8.32</td>
       <td style="padding: 5px; border-right: 1px solid black;">2.47</td>
@@ -471,17 +471,17 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
       <td style="padding: 5px;"><b>-0.12</b></td>
     </tr>
     <tr style="border-bottom: 1px solid black;">
-      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">&nbsp;&nbsp;+ DPO</td>
-      <td style="padding: 5px;">5.69</td>
-      <td style="padding: 5px;"><b>5.5</b></td>
-      <td style="padding: 5px; border-right: 1px solid black;"><b>-0.19</b></td>
-      <td style="padding: 5px;"><b>5.32</b></td>
-      <td style="padding: 5px;"><b>5.23</b></td>
-      <td style="padding: 5px;">-0.09</td>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black; border-bottom: 1px solid black;">&nbsp;&nbsp;+ DPO</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">5.69</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>5.5</b></td>
+      <td style="padding: 5px; border-right: 1px solid black; border-bottom: 1px solid black;"><b>-0.19</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>5.32</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>5.23</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">-0.09</td>
     </tr>
     <tr>
       <td rowspan="3" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">2</td>
-      <td style="padding: 5px; text-align: left; border-bottom: 1px solid black; border-right: 1px solid black;">hyp / GT</td>
+      <td style="padding: 5px; text-align: left;border-right: 1px solid black;">hyp / GT</td>
       <td style="padding: 5px;">6.89</td>
       <td style="padding: 5px;">8.43</td>
       <td style="padding: 5px; border-right: 1px solid black;">1.54</td>
@@ -499,17 +499,17 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
       <td style="padding: 5px;">2.46</td>
     </tr>
     <tr style="border-bottom: 1px solid black;">
-      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">&nbsp;&nbsp;+ DPO</td>
-      <td style="padding: 5px;"><b>5.07</b></td>
-      <td style="padding: 5px;"><b>6.59</b></td>
-      <td style="padding: 5px; border-right: 1px solid black;"><b>1.52</b></td>
-      <td style="padding: 5px;"><b>5.17</b></td>
-      <td style="padding: 5px;"><b>5.63</b></td>
-      <td style="padding: 5px;"><b>0.46</b></td>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black; border-bottom: 1px solid black;">&nbsp;&nbsp;+ DPO</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>5.07</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>6.59</b></td>
+      <td style="padding: 5px; border-right: 1px solid black; border-bottom: 1px solid black;"><b>1.52</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>5.17</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>5.63</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>0.46</b></td>
     </tr>
     <tr>
       <td rowspan="3" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">3</td>
-      <td style="padding: 5px; text-align: left; border-bottom: 1px solid black; border-right: 1px solid black;">hyp / GT</td>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">hyp / GT</td>
       <td style="padding: 5px;">7.05</td>
       <td style="padding: 5px;">7.64</td>
       <td style="padding: 5px; border-right: 1px solid black;">0.59</td>
@@ -527,17 +527,17 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
       <td style="padding: 5px;">1.66</td>
     </tr>
     <tr style="border-bottom: 1px solid black;">
-      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">&nbsp;&nbsp;+ DPO</td>
-      <td style="padding: 5px;"><b>5.98</b></td>
-      <td style="padding: 5px;"><b>6.24</b></td>
-      <td style="padding: 5px; border-right: 1px solid black;"><b>0.26</b></td>
-      <td style="padding: 5px;"><b>5.18</b></td>
-      <td style="padding: 5px;"><b>5.31</b></td>
-      <td style="padding: 5px;">0.13</td>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black; border-bottom: 1px solid black;">&nbsp;&nbsp;+ DPO</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>5.98</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>6.24</b></td>
+      <td style="padding: 5px; border-right: 1px solid black; border-bottom: 1px solid black;"><b>0.26</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>5.18</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>5.31</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">0.13</td>
     </tr>
     <tr>
       <td rowspan="3" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">4</td>
-      <td style="padding: 5px; text-align: left; border-bottom: 1px solid black; border-right: 1px solid black;">hyp / GT</td>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">hyp / GT</td>
       <td style="padding: 5px;">7.74</td>
       <td style="padding: 5px;">9.75</td>
       <td style="padding: 5px; border-right: 1px solid black;">2.01</td>
@@ -555,17 +555,17 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
       <td style="padding: 5px;"><b>1.01</b></td>
     </tr>
     <tr style="border-bottom: 1px solid black;">
-      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">&nbsp;&nbsp;+ DPO</td>
-      <td style="padding: 5px;"><b>4.93</b></td>
-      <td style="padding: 5px;"><b>5.44</b></td>
-      <td style="padding: 5px; border-right: 1px solid black;">0.51</td>
-      <td style="padding: 5px;"><b>5.69</b></td>
-      <td style="padding: 5px;"><b>7.58</b></td>
-      <td style="padding: 5px;">1.89</td>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black; border-bottom: 1px solid black;">&nbsp;&nbsp;+ DPO</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>4.93</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>5.44</b></td>
+      <td style="padding: 5px; border-right: 1px solid black; border-bottom: 1px solid black;">0.51</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>5.69</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>7.58</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;">1.89</td>
     </tr>
     <tr>
       <td rowspan="3" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">5</td>
-      <td style="padding: 5px; text-align: left; border-bottom: 1px solid black; border-right: 1px solid black;">hyp / GT</td>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">hyp / GT</td>
       <td style="padding: 5px;">10.34</td>
       <td style="padding: 5px;">11.83</td>
       <td style="padding: 5px; border-right: 1px solid black;">1.49</td>
@@ -583,13 +583,13 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
       <td style="padding: 5px;">2.84</td>
     </tr>
     <tr style="border-bottom: 1px solid black;">
-      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">&nbsp;&nbsp;+ DPO</td>
-      <td style="padding: 5px;"><b>5.34</b></td>
-      <td style="padding: 5px;"><b>6.20</b></td>
-      <td style="padding: 5px; border-right: 1px solid black;">0.86</td>
-      <td style="padding: 5px;"><b>4.96</b></td>
-      <td style="padding: 5px;"><b>5.51</b></td>
-      <td style="padding: 5px;"><b>0.55</b></td>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black; border-bottom: 1px solid black;">&nbsp;&nbsp;+ DPO</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>5.34</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>6.20</b></td>
+      <td style="padding: 5px; border-right: 1px solid black; border-bottom: 1px solid black;">0.86</td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>4.96</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>5.51</b></td>
+      <td style="padding: 5px; border-bottom: 1px solid black;"><b>0.55</b></td>
     </tr>
   </tbody>
 </table>
@@ -607,18 +607,18 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
       <th colspan="3" style="padding: 4px; border-bottom: 1px solid black;">LibriSpeech (WER %) &darr;</th>
     </tr>
     <tr style="border-bottom: 1px solid black;">
-      <th style="padding: 4px;">Attacks/o</th>
-      <th style="padding: 4px;">Attacks/w</th>
-      <th style="padding: 4px; border-right: 1px solid black;">Gap &darr;</th>
-      <th style="padding: 4px;">Test-clean</th>
-      <th style="padding: 4px;">Test-other</th>
-      <th style="padding: 4px;">Ave.</th>
+      <th style="padding: 4px; border-bottom: 1px solid black;">Attacks/o</th>
+      <th style="padding: 4px; border-bottom: 1px solid black;">Attacks/w</th>
+      <th style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">Gap &darr;</th>
+      <th style="padding: 4px; border-bottom: 1px solid black;">Test-clean</th>
+      <th style="padding: 4px; border-bottom: 1px solid black;">Test-other</th>
+      <th style="padding: 4px; border-bottom: 1px solid black;">Ave.</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">5</td>
-      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0</td>
+      <td style="padding: 4px; border-right: 1px solid black">0</td>
       <td>5.47</td><td>7.93</td><td style="border-right: 1px solid black;">2.46</td><td>5.14</td><td>9.50</td><td>7.320</td>
     </tr>
     <tr>
@@ -646,12 +646,17 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
       <td>9.18</td><td>9.63</td><td style="border-right: 1px solid black;">0.45</td><td>8.58</td><td>14.65</td><td>11.615</td>
     </tr>
     <tr style="border-bottom: 1px solid black;">
-      <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
-      <td>50.40</td><td>50.97</td><td style="border-right: 1px solid black;">0.57</td><td>69.98</td><td>70.66</td><td>70.320</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0.625</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">50.40</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">50.97</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0.57</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">69.98</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">70.66</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">70.320</td>
     </tr>
     <tr>
       <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">10</td>
-      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0</td>
+      <td style="padding: 4px; border-right: 1px solid black;">0</td>
       <td>5.47</td><td>7.93</td><td style="border-right: 1px solid black;">2.46</td><td>5.14</td><td>9.50</td><td>7.320</td>
     </tr>
     <tr>
@@ -679,12 +684,17 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
       <td>10.22</td><td>10.87</td><td style="border-right: 1px solid black;">0.65</td><td>8.65</td><td>14.96</td><td>11.805</td>
     </tr>
     <tr style="border-bottom: 1px solid black;">
-      <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
-      <td>85.55</td><td>89.97</td><td style="border-right: 1px solid black;">4.42</td><td>88.93</td><td>85.49</td><td>87.210</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0.625</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">85.55</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">89.97</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">4.42</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">88.93</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">85.49</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">87.210</td>
     </tr>
     <tr>
       <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">15</td>
-      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0</td>
+      <td style="padding: 4px; border-right: 1px solid black;">0</td>
       <td>5.47</td><td>7.93</td><td style="border-right: 1px solid black;">2.46</td><td>5.14</td><td>9.50</td><td>7.320</td>
     </tr>
     <tr>
@@ -712,12 +722,17 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
       <td>8.27</td><td>8.84</td><td style="border-right: 1px solid black;">0.57</td><td>6.99</td><td>12.89</td><td>9.940</td>
     </tr>
     <tr style="border-bottom: 1px solid black;">
-      <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
-      <td>33.58</td><td>35.59</td><td style="border-right: 1px solid black;">2.01</td><td>22.72</td><td>27.96</td><td>25.340</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0.625</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">33.58</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">35.59</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">2.01</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">22.72</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">27.96</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">25.340</td>
     </tr>
     <tr>
       <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">20</td>
-      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0</td>
+      <td style="padding: 4px; border-right: 1px solid black;">0</td>
       <td>5.47</td><td>7.93</td><td style="border-right: 1px solid black;">2.46</td><td>5.14</td><td>9.50</td><td>7.320</td>
     </tr>
     <tr>
@@ -745,12 +760,17 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
       <td>8.39</td><td>8.67</td><td style="border-right: 1px solid black;">0.28</td><td>6.44</td><td>12.14</td><td>9.290</td>
     </tr>
     <tr style="border-bottom: 1px solid black;">
-      <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
-      <td>53.26</td><td>57.15</td><td style="border-right: 1px solid black;">3.89</td><td>27.11</td><td>28.96</td><td>28.035</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0.625</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">53.26</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">57.15</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">3.89</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">27.11</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">28.96</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">28.035</td>
     </tr>
     <tr>
       <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">25</td>
-      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0</td>
+      <td style="padding: 4px; border-right: 1px solid black;">0</td>
       <td>5.47</td><td>7.93</td><td style="border-right: 1px solid black;">2.46</td><td>5.14</td><td>9.50</td><td>7.320</td>
     </tr>
     <tr>
@@ -774,8 +794,13 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
       <td>5.74</td><td>6.04</td><td style="border-right: 1px solid black;">0.30</td><td>5.12</td><td>10.01</td><td>7.565</td>
     </tr>
     <tr>
-      <td style="padding: 4px; border-right: 1px solid black;">0.5</td>
-      <td>10.26</td><td>10.50</td><td style="border-right: 1px solid black;">0.24</td><td>8.25</td><td>14.64</td><td>11.445</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0.5</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">10.26</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">10.50</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0.24</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">8.25</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">14.64</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">11.445</td>
     </tr>
     <tr style="border-bottom: 1px solid black;">
       <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
@@ -783,7 +808,7 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
     </tr>
     <tr>
       <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">30</td>
-      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0</td>
+      <td style="padding: 4px; border-right: 1px solid black;">0</td>
       <td>5.47</td><td>7.93</td><td style="border-right: 1px solid black;">2.46</td><td>5.14</td><td>9.50</td><td>7.320</td>
     </tr>
     <tr>
@@ -811,8 +836,13 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
       <td>5.49</td><td>5.78</td><td style="border-right: 1px solid black;">0.29</td><td>5.11</td><td>10.00</td><td>7.555</td>
     </tr>
     <tr style="border-bottom: 1px solid black;">
-      <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
-      <td>8.77</td><td>9.11</td><td style="border-right: 1px solid black;">0.34</td><td>8.16</td><td>14.73</td><td>11.445</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0.625</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">8.77</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">9.11</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">0.34</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">8.16</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">14.73</td>
+      <td style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">11.445</td>
     </tr>
   </tbody>
 </table>
