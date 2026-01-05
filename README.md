@@ -10,7 +10,8 @@ conda env create -f environment.yml
 conda activate speechllm
 ~~~
 
-## Main Result
+## Results
+### Main Result
 <table border="1" style="border-collapse: collapse; width: 100%; text-align: center; font-family: Arial, sans-serif; font-size: 14px;">
   <caption style="caption-side: bottom; text-align: left; padding-top: 10px; font-size: 13px; color: #000;">
     Table 1: WER comparison on TED-LIUM 3 and out-of-domain Librispeech dataset across different context window sizes (<i>N</i>). The column <b>Con<sub>inf</sub> / Con<sub>train</sub></b> specifies the source of history used during inference and training, respectively. <b>hyp</b> denotes using the model's own predictions as history during inference. Regarding training configuration, <b>GT</b> uses ground-truth history, while <b>Whisper</b> indicates the model was trained using context decoded by Whisper to simulate historical errors. <b>+ DPO</b> and <b>+ SFT2</b> are additional fine-tuning stages applied to the SFT model.
@@ -325,6 +326,102 @@ conda activate speechllm
       <td style="border-bottom: 1px solid black; padding: 5px;">5.23</td>
       <td style="border-bottom: 1px solid black; padding: 5px;">9.33</td>
       <td style="border-bottom: 1px solid black; padding: 5px;">7.280</td>
+    </tr>
+  </tbody>
+</table>
+
+### DPO LoRA Scaling Factor Result
+<table border="1" style="border-collapse: collapse; width: 100%; text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 14px; color: #000; border: 1px solid black;">
+  <caption style="caption-side: bottom; text-align: left; padding-top: 10px; font-size: 13px; color: #000;">
+    Table 2: Impact of DPO LoRA scaling factor (&gamma;) during inference. TED-LIUM 3 Gap denotes the WER degradation caused by irrelevant context attacks. "Attacks/o" refers to relevant context inference, while "Attacks/w" refers to irrelevent context randomly selected from the test set.
+  </caption>
+  <thead>
+    <tr style="border-bottom: 1px solid black;">
+      <th rowspan="2" style="vertical-align: middle; padding: 5px; border-right: 1px solid black; border-bottom: 1px solid black;">&gamma;</th>
+      <th colspan="3" style="padding: 5px; border-right: 1px solid black; border-bottom: 1px solid black;">TED-LIUM 3 (WER %) &darr;</th>
+      <th colspan="3" style="padding: 5px; border-bottom: 1px solid black;">LibriSpeech (WER %) &darr;</th>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <th style="padding: 5px;">Attacks/o</th>
+      <th style="padding: 5px;">Attacks/w</th>
+      <th style="padding: 5px; border-right: 1px solid black;">Gap &darr;</th>
+      <th style="padding: 5px;">Test-clean</th>
+      <th style="padding: 5px;">Test-other</th>
+      <th style="padding: 5px;">Ave.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 5px; border-right: 1px solid black;">0</td>
+      <td style="padding: 5px;">5.47</td>
+      <td style="padding: 5px;">7.93</td>
+      <td style="padding: 5px; border-right: 1px solid black;">2.46</td>
+      <td style="padding: 5px;">5.14</td>
+      <td style="padding: 5px;">9.50</td>
+      <td style="padding: 5px;">7.320</td>
+    </tr>
+    <tr>
+      <td style="padding: 5px; border-right: 1px solid black;">0.0625</td>
+      <td style="padding: 5px;">5.37</td>
+      <td style="padding: 5px;">7.13</td>
+      <td style="padding: 5px; border-right: 1px solid black;">1.76</td>
+      <td style="padding: 5px;">5.12</td>
+      <td style="padding: 5px;">9.31</td>
+      <td style="padding: 5px;">7.215</td>
+    </tr>
+    <tr>
+      <td style="padding: 5px; border-right: 1px solid black;">0.125</td>
+      <td style="padding: 5px;">5.11</td>
+      <td style="padding: 5px;">5.76</td>
+      <td style="padding: 5px; border-right: 1px solid black;">0.65</td>
+      <td style="padding: 5px;">5.02</td>
+      <td style="padding: 5px;">9.53</td>
+      <td style="padding: 5px;">7.275</td>
+    </tr>
+    <tr>
+      <td style="padding: 5px; border-right: 1px solid black;">0.1875</td>
+      <td style="padding: 5px;"><b>5.06</b></td>
+      <td style="padding: 5px;">5.69</td>
+      <td style="padding: 5px; border-right: 1px solid black;">0.63</td>
+      <td style="padding: 5px;"><b>4.70</b></td>
+      <td style="padding: 5px;"><b>9.08</b></td>
+      <td style="padding: 5px;"><b>6.890</b></td>
+    </tr>
+    <tr>
+      <td style="padding: 5px; border-right: 1px solid black;">0.25</td>
+      <td style="padding: 5px;">5.17</td>
+      <td style="padding: 5px;"><b>5.63</b></td>
+      <td style="padding: 5px; border-right: 1px solid black;">0.46</td>
+      <td style="padding: 5px;">4.84</td>
+      <td style="padding: 5px;">9.19</td>
+      <td style="padding: 5px;">7.015</td>
+    </tr>
+    <tr>
+      <td style="padding: 5px; border-right: 1px solid black;">0.375</td>
+      <td style="padding: 5px;">5.55</td>
+      <td style="padding: 5px;">5.73</td>
+      <td style="padding: 5px; border-right: 1px solid black;"><b>0.18</b></td>
+      <td style="padding: 5px;">4.85</td>
+      <td style="padding: 5px;">9.63</td>
+      <td style="padding: 5px;">7.240</td>
+    </tr>
+    <tr>
+      <td style="padding: 5px; border-right: 1px solid black;">0.5</td>
+      <td style="padding: 5px;">8.39</td>
+      <td style="padding: 5px;">8.67</td>
+      <td style="padding: 5px; border-right: 1px solid black;">0.28</td>
+      <td style="padding: 5px;">6.44</td>
+      <td style="padding: 5px;">12.14</td>
+      <td style="padding: 5px;">9.290</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="padding: 5px; border-right: 1px solid black;">0.625</td>
+      <td style="padding: 5px;">53.26</td>
+      <td style="padding: 5px;">57.15</td>
+      <td style="padding: 5px; border-right: 1px solid black;">3.89</td>
+      <td style="padding: 5px;">27.11</td>
+      <td style="padding: 5px;">28.96</td>
+      <td style="padding: 5px;">28.035</td>
     </tr>
   </tbody>
 </table>
