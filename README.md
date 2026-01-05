@@ -354,7 +354,7 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr style="border-bottom: 1px solid black;">
       <td style="padding: 5px; border-right: 1px solid black;">0</td>
       <td style="padding: 5px;">5.47</td>
       <td style="padding: 5px;">7.93</td>
@@ -451,7 +451,7 @@ The model checkpoints are available for anonymous review on Figshare: [checkpoin
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr style="border-bottom: 1px solid black;">
       <td rowspan="3" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">1</td>
       <td style="padding: 5px; text-align: left; border-right: 1px solid black;">hyp / GT</td>
       <td style="padding: 5px;">5.85</td>
