@@ -425,3 +425,168 @@ conda activate speechllm
     </tr>
   </tbody>
 </table>
+
+### Robustness to Irrelevant Context
+<table border="1" style="border-collapse: collapse; width: 100%; text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 14px; color: #000; border: 1px solid black;">
+  <caption style="caption-side: bottom; text-align: left; padding-top: 10px; font-size: 13px; color: #000;">
+    Table 3: Robustness analysis against irrelevant context attacks on TED-LIUM 3. We evaluate model resilience by replacing the historical context with randomly sampled irrelevant text.
+  </caption>
+  <thead>
+    <tr style="border-bottom: 1px solid black;">
+      <th rowspan="2" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">N</th>
+      <th rowspan="2" style="vertical-align: middle; padding: 5px; border-right: 1px solid black; border-bottom: 1px solid black;">Con<sub>inf</sub> / Con<sub>train</sub></th>
+      <th colspan="3" style="padding: 5px; border-right: 1px solid black; border-bottom: 1px solid black;">0 Dropout WER (%)&darr;</th>
+      <th colspan="3" style="padding: 5px; border-bottom: 1px solid black;">0.5 Dropout WER (%)&darr;</th>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <th style="padding: 5px;">Attacks/o</th>
+      <th style="padding: 5px;">Attacks/w</th>
+      <th style="padding: 5px; border-right: 1px solid black;">Gap &darr;</th>
+      <th style="padding: 5px;">Attacks/o</th>
+      <th style="padding: 5px;">Attacks/w</th>
+      <th style="padding: 5px;">Gap &darr;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">1</td>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">hyp / GT</td>
+      <td style="padding: 5px;">5.85</td>
+      <td style="padding: 5px;">8.32</td>
+      <td style="padding: 5px; border-right: 1px solid black;">2.47</td>
+      <td style="padding: 5px;">7.47</td>
+      <td style="padding: 5px;">8.82</td>
+      <td style="padding: 5px;">1.35</td>
+    </tr>
+    <tr>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">hyp / Whisper</td>
+      <td style="padding: 5px;"><b>5.62</b></td>
+      <td style="padding: 5px;">6.27</td>
+      <td style="padding: 5px; border-right: 1px solid black;">0.65</td>
+      <td style="padding: 5px;">7.21</td>
+      <td style="padding: 5px;">7.09</td>
+      <td style="padding: 5px;"><b>-0.12</b></td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">&nbsp;&nbsp;+ DPO</td>
+      <td style="padding: 5px;">5.69</td>
+      <td style="padding: 5px;"><b>5.5</b></td>
+      <td style="padding: 5px; border-right: 1px solid black;"><b>-0.19</b></td>
+      <td style="padding: 5px;"><b>5.32</b></td>
+      <td style="padding: 5px;"><b>5.23</b></td>
+      <td style="padding: 5px;">-0.09</td>
+    </tr>
+    <tr>
+      <td rowspan="3" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">2</td>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">hyp / GT</td>
+      <td style="padding: 5px;">6.89</td>
+      <td style="padding: 5px;">8.43</td>
+      <td style="padding: 5px; border-right: 1px solid black;">1.54</td>
+      <td style="padding: 5px;">5.59</td>
+      <td style="padding: 5px;">9.23</td>
+      <td style="padding: 5px;">3.46</td>
+    </tr>
+    <tr>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">hyp / Whisper</td>
+      <td style="padding: 5px;">8.15</td>
+      <td style="padding: 5px;">10.37</td>
+      <td style="padding: 5px; border-right: 1px solid black;">2.22</td>
+      <td style="padding: 5px;">5.47</td>
+      <td style="padding: 5px;">7.93</td>
+      <td style="padding: 5px;">2.46</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">&nbsp;&nbsp;+ DPO</td>
+      <td style="padding: 5px;"><b>5.07</b></td>
+      <td style="padding: 5px;"><b>6.59</b></td>
+      <td style="padding: 5px; border-right: 1px solid black;"><b>1.52</b></td>
+      <td style="padding: 5px;"><b>5.17</b></td>
+      <td style="padding: 5px;"><b>5.63</b></td>
+      <td style="padding: 5px;"><b>0.46</b></td>
+    </tr>
+    <tr>
+      <td rowspan="3" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">3</td>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">hyp / GT</td>
+      <td style="padding: 5px;">7.05</td>
+      <td style="padding: 5px;">7.64</td>
+      <td style="padding: 5px; border-right: 1px solid black;">0.59</td>
+      <td style="padding: 5px;">12.62</td>
+      <td style="padding: 5px;">10.19</td>
+      <td style="padding: 5px;"><b>-2.43</b></td>
+    </tr>
+    <tr>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">hyp / Whisper</td>
+      <td style="padding: 5px;">10.06</td>
+      <td style="padding: 5px;">11.18</td>
+      <td style="padding: 5px; border-right: 1px solid black;">1.12</td>
+      <td style="padding: 5px;">7.87</td>
+      <td style="padding: 5px;">9.53</td>
+      <td style="padding: 5px;">1.66</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">&nbsp;&nbsp;+ DPO</td>
+      <td style="padding: 5px;"><b>5.98</b></td>
+      <td style="padding: 5px;"><b>6.24</b></td>
+      <td style="padding: 5px; border-right: 1px solid black;"><b>0.26</b></td>
+      <td style="padding: 5px;"><b>5.18</b></td>
+      <td style="padding: 5px;"><b>5.31</b></td>
+      <td style="padding: 5px;">0.13</td>
+    </tr>
+    <tr>
+      <td rowspan="3" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">4</td>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">hyp / GT</td>
+      <td style="padding: 5px;">7.74</td>
+      <td style="padding: 5px;">9.75</td>
+      <td style="padding: 5px; border-right: 1px solid black;">2.01</td>
+      <td style="padding: 5px;">10.87</td>
+      <td style="padding: 5px;">13.15</td>
+      <td style="padding: 5px;">2.28</td>
+    </tr>
+    <tr>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">hyp / Whisper</td>
+      <td style="padding: 5px;">87.37</td>
+      <td style="padding: 5px;">8.8</td>
+      <td style="padding: 5px; border-right: 1px solid black;"><b>-78.57</b></td>
+      <td style="padding: 5px;">7.81</td>
+      <td style="padding: 5px;">8.82</td>
+      <td style="padding: 5px;"><b>1.01</b></td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">&nbsp;&nbsp;+ DPO</td>
+      <td style="padding: 5px;"><b>4.93</b></td>
+      <td style="padding: 5px;"><b>5.44</b></td>
+      <td style="padding: 5px; border-right: 1px solid black;">0.51</td>
+      <td style="padding: 5px;"><b>5.69</b></td>
+      <td style="padding: 5px;"><b>7.58</b></td>
+      <td style="padding: 5px;">1.89</td>
+    </tr>
+    <tr>
+      <td rowspan="3" style="vertical-align: middle; padding: 5px; border-bottom: 1px solid black;">5</td>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">hyp / GT</td>
+      <td style="padding: 5px;">10.34</td>
+      <td style="padding: 5px;">11.83</td>
+      <td style="padding: 5px; border-right: 1px solid black;">1.49</td>
+      <td style="padding: 5px;">8.19</td>
+      <td style="padding: 5px;">10.41</td>
+      <td style="padding: 5px;">2.22</td>
+    </tr>
+    <tr>
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">hyp / Whisper</td>
+      <td style="padding: 5px;">135.57</td>
+      <td style="padding: 5px;">10.74</td>
+      <td style="padding: 5px; border-right: 1px solid black;"><b>-124.83</b></td>
+      <td style="padding: 5px;">8.5</td>
+      <td style="padding: 5px;">11.34</td>
+      <td style="padding: 5px;">2.84</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="padding: 5px; text-align: left; border-right: 1px solid black;">&nbsp;&nbsp;+ DPO</td>
+      <td style="padding: 5px;"><b>5.34</b></td>
+      <td style="padding: 5px;"><b>6.20</b></td>
+      <td style="padding: 5px; border-right: 1px solid black;">0.86</td>
+      <td style="padding: 5px;"><b>4.96</b></td>
+      <td style="padding: 5px;"><b>5.51</b></td>
+      <td style="padding: 5px;"><b>0.55</b></td>
+    </tr>
+  </tbody>
+</table>
