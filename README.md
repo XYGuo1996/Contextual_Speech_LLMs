@@ -590,3 +590,231 @@ conda activate speechllm
     </tr>
   </tbody>
 </table>
+
+### Data Selection and Inference Scaling for DPO
+<table border="1" style="border-collapse: collapse; width: 100%; text-align: center; font-family: 'Times New Roman', Times, serif; font-size: 13px; color: #000; border: 1px solid black;">
+  <caption style="caption-side: bottom; text-align: left; padding-top: 10px; font-size: 13px; color: #000;">
+    Table 4: Impact of Hard Negatives threshold and DPO LoRA scaling factor (&gamma;) during inference. TED-LIUM 3 Gap denotes the WER degradation caused by irrelevant context attacks.
+  </caption>
+  <thead>
+    <tr style="border-bottom: 1px solid black;">
+      <th rowspan="2" style="vertical-align: middle; padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">WER (%) Threshold</th>
+      <th rowspan="2" style="vertical-align: middle; padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">&gamma;</th>
+      <th colspan="3" style="padding: 4px; border-right: 1px solid black; border-bottom: 1px solid black;">TED-LIUM 3 (WER %) &darr;</th>
+      <th colspan="3" style="padding: 4px; border-bottom: 1px solid black;">LibriSpeech (WER %) &darr;</th>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <th style="padding: 4px;">Attacks/o</th>
+      <th style="padding: 4px;">Attacks/w</th>
+      <th style="padding: 4px; border-right: 1px solid black;">Gap &darr;</th>
+      <th style="padding: 4px;">Test-clean</th>
+      <th style="padding: 4px;">Test-other</th>
+      <th style="padding: 4px;">Ave.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">5</td>
+      <td style="padding: 4px; border-right: 1px solid black;">0</td>
+      <td>5.47</td><td>7.93</td><td style="border-right: 1px solid black;">2.46</td><td>5.14</td><td>9.50</td><td>7.320</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.0625</td>
+      <td>5.40</td><td>7.02</td><td style="border-right: 1px solid black;">1.62</td><td>5.11</td><td><b>9.32</b></td><td><b>7.215</b></td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.125</td>
+      <td>5.43</td><td>7.34</td><td style="border-right: 1px solid black;">1.91</td><td>5.18</td><td>9.41</td><td>7.295</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.1875</td>
+      <td><b>5.04</b></td><td>6.76</td><td style="border-right: 1px solid black;">1.72</td><td><b>5.09</b></td><td>9.70</td><td>7.395</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.25</td>
+      <td>5.23</td><td><b>5.99</b></td><td style="border-right: 1px solid black;">0.76</td><td>5.18</td><td>9.51</td><td>7.345</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.375</td>
+      <td>6.21</td><td>6.42</td><td style="border-right: 1px solid black;"><b>0.21</b></td><td>5.49</td><td>10.19</td><td>7.840</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.5</td>
+      <td>9.18</td><td>9.63</td><td style="border-right: 1px solid black;">0.45</td><td>8.58</td><td>14.65</td><td>11.615</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
+      <td>50.40</td><td>50.97</td><td style="border-right: 1px solid black;">0.57</td><td>69.98</td><td>70.66</td><td>70.320</td>
+    </tr>
+
+    <tr>
+      <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">10</td>
+      <td style="padding: 4px; border-right: 1px solid black;">0</td>
+      <td>5.47</td><td>7.93</td><td style="border-right: 1px solid black;">2.46</td><td>5.14</td><td>9.50</td><td>7.320</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.0625</td>
+      <td>5.40</td><td>7.10</td><td style="border-right: 1px solid black;">1.70</td><td>5.11</td><td><b>9.30</b></td><td>7.205</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.125</td>
+      <td>5.32</td><td>6.91</td><td style="border-right: 1px solid black;">1.59</td><td>5.19</td><td>9.61</td><td>7.400</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.1875</td>
+      <td><b>5.04</b></td><td>6.63</td><td style="border-right: 1px solid black;">1.59</td><td>5.04</td><td>9.67</td><td>7.355</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.25</td>
+      <td>5.27</td><td><b>6.00</b></td><td style="border-right: 1px solid black;">0.73</td><td><b>4.62</b></td><td>9.50</td><td><b>7.060</b></td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.375</td>
+      <td>6.29</td><td>6.38</td><td style="border-right: 1px solid black;"><b>0.09</b></td><td>5.06</td><td>10.22</td><td>7.640</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.5</td>
+      <td>10.22</td><td>10.87</td><td style="border-right: 1px solid black;">0.65</td><td>8.65</td><td>14.96</td><td>11.805</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
+      <td>85.55</td><td>89.97</td><td style="border-right: 1px solid black;">4.42</td><td>88.93</td><td>85.49</td><td>87.210</td>
+    </tr>
+
+    <tr>
+      <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">15</td>
+      <td style="padding: 4px; border-right: 1px solid black;">0</td>
+      <td>5.47</td><td>7.93</td><td style="border-right: 1px solid black;">2.46</td><td>5.14</td><td>9.50</td><td>7.320</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.0625</td>
+      <td>5.40</td><td>7.43</td><td style="border-right: 1px solid black;">2.03</td><td>5.12</td><td>9.30</td><td>7.210</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.125</td>
+      <td>5.15</td><td>6.63</td><td style="border-right: 1px solid black;">1.48</td><td>5.21</td><td>9.58</td><td>7.395</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.1875</td>
+      <td>5.12</td><td>5.91</td><td style="border-right: 1px solid black;">0.79</td><td>4.98</td><td>9.46</td><td>7.220</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.25</td>
+      <td><b>5.07</b></td><td><b>5.67</b></td><td style="border-right: 1px solid black;"><b>0.60</b></td><td><b>4.77</b></td><td><b>9.27</b></td><td><b>7.020</b></td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.375</td>
+      <td>5.79</td><td>6.14</td><td style="border-right: 1px solid black;">0.35</td><td>5.04</td><td>9.84</td><td>7.440</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.5</td>
+      <td>8.27</td><td>8.84</td><td style="border-right: 1px solid black;">0.57</td><td>6.99</td><td>12.89</td><td>9.940</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
+      <td>33.58</td><td>35.59</td><td style="border-right: 1px solid black;">2.01</td><td>22.72</td><td>27.96</td><td>25.340</td>
+    </tr>
+
+    <tr>
+      <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">20</td>
+      <td style="padding: 4px; border-right: 1px solid black;">0</td>
+      <td>5.47</td><td>7.93</td><td style="border-right: 1px solid black;">2.46</td><td>5.14</td><td>9.50</td><td>7.320</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.0625</td>
+      <td>5.37</td><td>7.13</td><td style="border-right: 1px solid black;">1.76</td><td>5.12</td><td>9.31</td><td>7.215</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.125</td>
+      <td>5.11</td><td>5.76</td><td style="border-right: 1px solid black;">0.65</td><td>5.02</td><td>9.53</td><td>7.275</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.1875</td>
+      <td><b>5.06</b></td><td>5.69</td><td style="border-right: 1px solid black;">0.63</td><td><b>4.70</b></td><td><b>9.08</b></td><td><b>6.890</b></td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.25</td>
+      <td>5.17</td><td><b>5.63</b></td><td style="border-right: 1px solid black;">0.46</td><td>4.84</td><td>9.19</td><td>7.015</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.375</td>
+      <td>5.55</td><td>5.73</td><td style="border-right: 1px solid black;"><b>0.18</b></td><td>4.85</td><td>9.63</td><td>7.240</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.5</td>
+      <td>8.39</td><td>8.67</td><td style="border-right: 1px solid black;">0.28</td><td>6.44</td><td>12.14</td><td>9.290</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
+      <td>53.26</td><td>57.15</td><td style="border-right: 1px solid black;">3.89</td><td>27.11</td><td>28.96</td><td>28.035</td>
+    </tr>
+
+    <tr>
+      <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">25</td>
+      <td style="padding: 4px; border-right: 1px solid black;">0</td>
+      <td>5.47</td><td>7.93</td><td style="border-right: 1px solid black;">2.46</td><td>5.14</td><td>9.50</td><td>7.320</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.0625</td>
+      <td>5.39</td><td>7.40</td><td style="border-right: 1px solid black;">2.01</td><td>5.13</td><td>9.33</td><td>7.230</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.125</td>
+      <td>5.28</td><td>6.00</td><td style="border-right: 1px solid black;">0.72</td><td>5.21</td><td>9.57</td><td>7.390</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.1875</td>
+      <td><b>5.08</b></td><td>5.68</td><td style="border-right: 1px solid black;">0.60</td><td><b>4.70</b></td><td><b>9.18</b></td><td><b>6.940</b></td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.25</td>
+      <td>5.28</td><td><b>5.34</b></td><td style="border-right: 1px solid black;"><b>0.06</b></td><td>4.84</td><td>9.33</td><td>7.085</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.375</td>
+      <td>5.74</td><td>6.04</td><td style="border-right: 1px solid black;">0.30</td><td>5.12</td><td>10.01</td><td>7.565</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.5</td>
+      <td>10.26</td><td>10.50</td><td style="border-right: 1px solid black;">0.24</td><td>8.25</td><td>14.64</td><td>11.445</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
+      <td>31.01</td><td>30.48</td><td style="border-right: 1px solid black;">-0.53</td><td>28.03</td><td>35.84</td><td>31.935</td>
+    </tr>
+
+    <tr>
+      <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">30</td>
+      <td style="padding: 4px; border-right: 1px solid black;">0</td>
+      <td>5.47</td><td>7.93</td><td style="border-right: 1px solid black;">2.46</td><td>5.14</td><td>9.50</td><td>7.320</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.0625</td>
+      <td>5.32</td><td>7.38</td><td style="border-right: 1px solid black;">2.06</td><td>5.14</td><td><b>9.28</b></td><td>7.210</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.125</td>
+      <td>5.12</td><td>6.06</td><td style="border-right: 1px solid black;">0.94</td><td>5.14</td><td>9.48</td><td>7.310</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.1875</td>
+      <td>5.00</td><td>5.51</td><td style="border-right: 1px solid black;">0.51</td><td><b>4.70</b></td><td>9.54</td><td>7.120</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.25</td>
+      <td><b>4.97</b></td><td>5.39</td><td style="border-right: 1px solid black;">0.42</td><td>4.74</td><td><b>9.28</b></td><td><b>7.010</b></td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.375</td>
+      <td><b>4.97</b></td><td><b>5.20</b></td><td style="border-right: 1px solid black;"><b>0.23</b></td><td>4.83</td><td>9.33</td><td>7.080</td>
+    </tr>
+    <tr>
+      <td style="padding: 4px; border-right: 1px solid black;">0.5</td>
+      <td>5.49</td><td>5.78</td><td style="border-right: 1px solid black;">0.29</td><td>5.11</td><td>10.00</td><td>7.555</td>
+    </tr>
+    <tr style="border-bottom: 1px solid black;">
+      <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
+      <td>8.77</td><td>9.11</td><td style="border-right: 1px solid black;">0.34</td><td>8.16</td><td>14.73</td><td>11.445</td>
+    </tr>
+  </tbody>
+</table>
