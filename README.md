@@ -646,7 +646,6 @@ conda activate speechllm
       <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
       <td>50.40</td><td>50.97</td><td style="border-right: 1px solid black;">0.57</td><td>69.98</td><td>70.66</td><td>70.320</td>
     </tr>
-
     <tr>
       <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">10</td>
       <td style="padding: 4px; border-right: 1px solid black;">0</td>
@@ -680,7 +679,6 @@ conda activate speechllm
       <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
       <td>85.55</td><td>89.97</td><td style="border-right: 1px solid black;">4.42</td><td>88.93</td><td>85.49</td><td>87.210</td>
     </tr>
-
     <tr>
       <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">15</td>
       <td style="padding: 4px; border-right: 1px solid black;">0</td>
@@ -714,7 +712,6 @@ conda activate speechllm
       <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
       <td>33.58</td><td>35.59</td><td style="border-right: 1px solid black;">2.01</td><td>22.72</td><td>27.96</td><td>25.340</td>
     </tr>
-
     <tr>
       <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">20</td>
       <td style="padding: 4px; border-right: 1px solid black;">0</td>
@@ -748,7 +745,6 @@ conda activate speechllm
       <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
       <td>53.26</td><td>57.15</td><td style="border-right: 1px solid black;">3.89</td><td>27.11</td><td>28.96</td><td>28.035</td>
     </tr>
-
     <tr>
       <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">25</td>
       <td style="padding: 4px; border-right: 1px solid black;">0</td>
@@ -782,7 +778,6 @@ conda activate speechllm
       <td style="padding: 4px; border-right: 1px solid black;">0.625</td>
       <td>31.01</td><td>30.48</td><td style="border-right: 1px solid black;">-0.53</td><td>28.03</td><td>35.84</td><td>31.935</td>
     </tr>
-
     <tr>
       <td rowspan="8" style="vertical-align: middle; border-right: 1px solid black; border-bottom: 1px solid black;">30</td>
       <td style="padding: 4px; border-right: 1px solid black;">0</td>
