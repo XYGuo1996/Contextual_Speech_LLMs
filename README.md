@@ -11,7 +11,7 @@ conda activate speechllm
 ~~~
 
 ## Checkpoints
-\url{https://zenodo.org/records/18149225?preview=1&token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImYyNjdlNDlmLTEzMzEtNDJhOS05ZjNhLWM2NTk2NmEzMWYxOCIsImRhdGEiOnt9LCJyYW5kb20iOiJmZTdlMjJkZWM4NTc2NTlkMmMxZDdhODg5ZmE4MTA0NiJ9.7_NEjT2PgjfKjQ_j-y8rT6cyiOfTOXT3dtLOfYAcSASZa3Ks8bAbsga_a7rSL3Gs0bc6qqyX0F6d9-YoFiHVZw}
+[checkpoints](https://zenodo.org/records/18149225?preview=1&token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImYyNjdlNDlmLTEzMzEtNDJhOS05ZjNhLWM2NTk2NmEzMWYxOCIsImRhdGEiOnt9LCJyYW5kb20iOiJmZTdlMjJkZWM4NTc2NTlkMmMxZDdhODg5ZmE4MTA0NiJ9.7_NEjT2PgjfKjQ_j-y8rT6cyiOfTOXT3dtLOfYAcSASZa3Ks8bAbsga_a7rSL3Gs0bc6qqyX0F6d9-YoFiHVZw)
 
 ## Results
 ### Main Result
