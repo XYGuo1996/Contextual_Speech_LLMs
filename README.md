@@ -11,7 +11,7 @@ conda activate speechllm
 ~~~
 
 ## Checkpoints
-The model checkpoints are available for anonymous review on Figshare and Zenodo: [Figshare](https://figshare.com/s/e8c84e55f36540c160b7) [Zenodo](https://zenodo.org/records/18181120?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6Ijk3N2YwOGZlLTEwODYtNDIyNS1iOTVlLWM4ZjViZTk3NDJkZSIsImRhdGEiOnt9LCJyYW5kb20iOiIxNGY2ZDU3Nzc2ZjA4ZGM3NGQ0MThjODk5NmQ4OWJkNSJ9.xhD-hOqHS-WAt-awXHMdWlPo_l3spRjUzfEo0sEPrO83o9xIsRvsZH1MD7k3Xpqh8ElJ6Y3-Brd0scKL_jv8bA)
+The model checkpoints are available for anonymous review on Figshare and Zenodo: [Figshare](https://figshare.com/s/e8c84e55f36540c160b7), [Zenodo](https://zenodo.org/records/18181120?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6Ijk3N2YwOGZlLTEwODYtNDIyNS1iOTVlLWM4ZjViZTk3NDJkZSIsImRhdGEiOnt9LCJyYW5kb20iOiIxNGY2ZDU3Nzc2ZjA4ZGM3NGQ0MThjODk5NmQ4OWJkNSJ9.xhD-hOqHS-WAt-awXHMdWlPo_l3spRjUzfEo0sEPrO83o9xIsRvsZH1MD7k3Xpqh8ElJ6Y3-Brd0scKL_jv8bA)
 
 ## Results
 ### Main Result
