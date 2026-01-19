@@ -1,9 +1,9 @@
 #!/bin/bash
 #SBATCH --job-name=speechllm
 #SBATCH --nodes=1
-#SBATCH --ntasks=1                 # 由 torchrun 自己起多进程
-#SBATCH --gres=gpu:4               # 单机4卡
-#SBATCH --cpus-per-task=16         # 自行按需（每进程将均分/争用）
+#SBATCH --ntasks=1
+#SBATCH --gres=gpu:4
+#SBATCH --cpus-per-task=16
 #SBATCH --time=480:00:00
 #SBATCH --output=logs/TED/edp_whisper_large_v3_pooling_adapter_vicuna7b_TED_1_whisper_20251203_0dropout.out
 
