@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=speechllm_dpo
 #SBATCH --nodes=1
-#SBATCH --ntasks=1 \ \ \  # 单进程运行
-#SBATCH --gres=gpu:4 \ \ \# 默认单卡做 DPO 微调
+#SBATCH --ntasks=1
+#SBATCH --gres=gpu:4
 #SBATCH --cpus-per-task=16
 #SBATCH --time=240:00:00
 #SBATCH --output=logs/TED/edp_whisper_large_v3_pooling_adapter_vicuna7b_TED_2_whisper_0.5dropout_DPO_WER_5.out
