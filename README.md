@@ -851,3 +851,12 @@ The model checkpoints are available for anonymous review on Figshare and Zenodo:
     </tr>
   </tbody>
 </table>
+
+# Citation
+If this project is useful for your research, please cite:
+</@article{guo2026oracle,
+  title={From Oracle to Noisy Context: Mitigating Contextual Exposure Bias in Speech-LLMs},
+  author={Guo, Xiaoyong and Li, Nanjie and Zeng, Zijie and Wang, Kai and Huang, Hao and Xu, Haihua and Shi, Wei},
+  journal={arXiv preprint arXiv:2603.24034},
+  year={2026}
+}>
